@@ -226,7 +226,6 @@ h6 {
   color: #3CBF32;
   display: inline-block;
   position: absolute;
-  left: 16px;
   bottom: 55px;
   padding: 3px 6px;
 }
@@ -252,12 +251,26 @@ h6 {
     font-size: 0.625rem;
   }
 }
-@media (max-width: 38.75em) {
+@media (min-width: 89.375em) {
   .item-card__sale {
-    right: 10px;
-    top: 10px;
-    left: auto;
-    bottom: auto;
+    left: 1rem;
+  }
+}
+@media (min-width: 23.4375em) and (max-width: 89.375em) {
+  @supports (left: clamp( 0.375rem , 0.1528436019rem  +  0.9478672986vw , 1rem )) {
+    .item-card__sale {
+      left: clamp( 0.375rem , 0.1528436019rem  +  0.9478672986vw , 1rem );
+    }
+  }
+  @supports not (left: clamp( 0.375rem , 0.1528436019rem  +  0.9478672986vw , 1rem )) {
+    .item-card__sale {
+      left: calc(0.375rem + 0.625 * (100vw - 23.4375rem) / 65.9375);
+    }
+  }
+}
+@media (max-width: 23.4375em) {
+  .item-card__sale {
+    left: 0.375rem;
   }
 }
 .item-card__like {
