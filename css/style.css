@@ -1152,6 +1152,11 @@ h6 {
     font-size: 0.75rem;
   }
 }
+@media (max-width: 25em) {
+  .footer__part-list__item {
+    font-size: 16px !important;
+  }
+}
 @media (min-width: 89.375em) {
   .footer__part-list__item {
     margin-bottom: 0.625rem;
@@ -1297,7 +1302,7 @@ h6 {
   max-width: 100%;
 }
 
-@media (max-width: 68.75em) {
+@media (max-width: 68.75em) and (min-width: 35em) {
   .filter__main {
     max-width: calc(100% - 100px);
   }
