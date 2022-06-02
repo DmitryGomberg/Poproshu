@@ -1,0 +1,498 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 375px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Arial";
+  font-size: 0.875rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Arial";
+  font-size: inherit;
+}
+
+button {
+  cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  touch-action: none;
+}
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.wrapper > main {
+  flex: 1 1 auto;
+}
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко 
+всем классам содержащим *__container
+Например header__container, main__container и т.д.
+Снипет (HTML): cnt
+*/
+[class*=__container] {
+  max-width: 87.5rem;
+  box-sizing: content-box;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+.checkbox {
+  position: relative;
+}
+.checkbox:not(:last-child) {
+  margin-bottom: 0.3125em;
+}
+.checkbox__input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.checkbox__input + .checkbox__label:after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/icon-check.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.2s ease;
+  transform: scale(0);
+}
+.checkbox__input:checked + .checkbox__label:after {
+  transform: scale(1);
+}
+.checkbox__label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  gap: 10px;
+}
+.checkbox__label:before {
+  content: "";
+  align-self: flex-start;
+  flex: 0 0 14px;
+  width: 14px;
+  height: 14px;
+  border: 1px solid #858383;
+  border-radius: 2px;
+}
+.checkbox__text {
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.3333333333;
+  color: #42474C;
+}
+
+[class*=-ibg] {
+  position: relative;
+}
+[class*=-ibg] img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+[class*=-ibg_contain] img {
+  object-fit: contain;
+}
+
+.green {
+  color: #3CBF32;
+}
+
+.btn {
+  background: #FFFFFF;
+  border: 1px solid #3CBF32;
+  border-radius: 10px;
+  max-width: 210px;
+  width: 100%;
+  padding: 9px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #3CBF32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+@media (any-hover: hover) {
+  .btn:hover {
+    background: #edecec;
+  }
+}
+
+.btn-green {
+  color: #fff;
+  border: none;
+  background: #3CBF32;
+}
+@media (any-hover: hover) {
+  .btn-green:hover {
+    background: #32a22a;
+  }
+}
+
+.title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  line-height: 1.5625;
+  color: #42474C;
+}
+@media (min-width: 89.375em) {
+  .title {
+    font-size: 1.5625rem;
+  }
+}
+@media (min-width: 23.4375em) and (max-width: 89.375em) {
+  @supports (font-size: clamp( 1.125rem , 0.9694905213rem  +  0.663507109vw , 1.5625rem )) {
+    .title {
+      font-size: clamp( 1.125rem , 0.9694905213rem  +  0.663507109vw , 1.5625rem );
+    }
+  }
+  @supports not (font-size: clamp( 1.125rem , 0.9694905213rem  +  0.663507109vw , 1.5625rem )) {
+    .title {
+      font-size: calc(1.125rem + 0.4375 * (100vw - 23.4375rem) / 65.9375);
+    }
+  }
+}
+@media (max-width: 23.4375em) {
+  .title {
+    font-size: 1.125rem;
+  }
+}
+
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/
+@media (min-width: 89.375em) {
+  .filter__title {
+    margin-bottom: 1.6875rem;
+  }
+}
+@media (min-width: 23.4375em) and (max-width: 89.375em) {
+  @supports (margin-bottom: clamp( 0.9375rem , 0.6709123223rem  +  1.1374407583vw , 1.6875rem )) {
+    .filter__title {
+      margin-bottom: clamp( 0.9375rem , 0.6709123223rem  +  1.1374407583vw , 1.6875rem );
+    }
+  }
+  @supports not (margin-bottom: clamp( 0.9375rem , 0.6709123223rem  +  1.1374407583vw , 1.6875rem )) {
+    .filter__title {
+      margin-bottom: calc(0.9375rem + 0.75 * (100vw - 23.4375rem) / 65.9375);
+    }
+  }
+}
+@media (max-width: 23.4375em) {
+  .filter__title {
+    margin-bottom: 0.9375rem;
+  }
+}
+.filter__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (max-width: 40.625em) {
+  .filter__wrap {
+    flex-direction: column;
+  }
+}
+.filter__main {
+  flex: 1 1 auto;
+  max-width: 100%;
+}
+.filter__line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 100%;
+}
+@media (max-width: 40.625em) {
+  .filter__line {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.filter__sort-wrap {
+  display: flex;
+  margin-right: 30px;
+}
+.filter__sort-decor {
+  background: #3CBF32;
+  width: 3px;
+  height: 34px;
+  position: relative;
+  display: block;
+  margin-right: 6px;
+  overflow: hidden;
+}
+.filter__sort-decor::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: -1px;
+  top: -3px;
+  background-color: #fff;
+  transform: rotate(40deg);
+}
+.filter__sort-decor::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: 0px;
+  bottom: -5px;
+  background-color: #fff;
+  transform: rotate(220deg);
+}
+.filter__sort {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+@media (max-width: 40.625em) {
+  .filter__sort {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+.filter__sort-item {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.3333333333;
+  color: #42474C;
+  transition: all 0.2s ease;
+  padding: 7px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.filter__sort-item img {
+  margin-right: 13px;
+}
+.filter__sort-item:last-child {
+  margin-right: 0;
+}
+.filter__sort-item.active {
+  background: rgba(60, 191, 50, 0.1);
+}
+@media (any-hover: hover) {
+  .filter__sort-item:hover {
+    background: rgba(60, 191, 50, 0.1);
+  }
+}
+.filter__check {
+  display: flex;
+  align-items: center;
+}
+.filter__check > .checkbox {
+  margin-right: 40px;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+.filter__check > .checkbox:last-child {
+  margin-right: 0;
+}
+@media (max-width: 40.625em) {
+  .filter__check {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .filter__check > .checkbox {
+    margin-right: 0px;
+    margin-bottom: 5px;
+  }
+  .filter__check > .checkbox:last-child {
+    margin-bottom: 0;
+  }
+}
+.filter__tags {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 5px;
+  column-gap: 14px;
+  padding-top: 15px;
+}
+@media (max-width: 40.625em) {
+  .filter__tags {
+    position: relative;
+    left: 0;
+    width: 100%;
+    overflow: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 20px;
+  }
+}
+.filter__tag {
+  border: 1px solid #3CBF32;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 8px 10px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+@media (any-hover: hover) {
+  .filter__tag:hover {
+    background-color: rgb(221, 246, 218);
+  }
+}
+.filter__tag svg {
+  margin-left: 6px;
+  width: 8px;
+  height: 8px;
+}
+.filter__tag.active {
+  background: #3CBF32;
+  color: #fff;
+}
+.filter__tag.active svg path {
+  fill: #fff;
+  stroke: #fff;
+}
+.filter__type {
+  flex: 0 0 100px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+@media (max-width: 40.625em) {
+  .filter__type {
+    flex: 0 0 40px;
+  }
+}
+.filter__type img {
+  margin-right: 15px;
+  cursor: pointer;
+}
+.filter__type img:last-child {
+  margin-right: 0;
+}
