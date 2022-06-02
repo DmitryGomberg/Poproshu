@@ -22,21 +22,6 @@
             }));
         }
     }), 0);
-    const filterSort = document.querySelectorAll(".filter__sort-item");
-    filterSort.forEach((element => {
-        element.addEventListener("click", (function() {
-            filterSort.forEach((element => {
-                element.classList.remove("active");
-            }));
-            element.classList.add("active");
-        }));
-    }));
-    const filtertags = document.querySelectorAll(".filter__tag");
-    filtertags.forEach((element => {
-        element.addEventListener("click", (function() {
-            element.classList.toggle("active");
-        }));
-    }));
     window["FLS"] = true;
     isWebp();
 })();
