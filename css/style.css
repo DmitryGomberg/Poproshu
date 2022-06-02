@@ -319,9 +319,25 @@ h6 {
     flex-direction: column;
   }
 }
+@media (max-width: 68.75em) {
+  .filter__wrap {
+    display: block;
+    position: relative;
+  }
+}
 .filter__main {
   flex: 1 1 auto;
   max-width: 100%;
+}
+@media (max-width: 68.75em) {
+  .filter__main {
+    max-width: calc(100% - 100px);
+  }
+}
+@media (max-width: 35em) {
+  .filter__main {
+    max-width: 100%;
+  }
 }
 .filter__line {
   display: flex;
@@ -435,26 +451,25 @@ h6 {
 }
 .filter__tags {
   display: flex;
-  flex-wrap: wrap;
   row-gap: 5px;
   column-gap: 14px;
   padding-top: 15px;
 }
-@media (max-width: 40.625em) {
+@media (max-width: 68.75em) {
   .filter__tags {
     position: relative;
     left: 0;
-    width: 100%;
-    overflow: auto;
+    overflow: scroll;
     flex-wrap: nowrap;
     padding-bottom: 20px;
+    max-width: 100%;
   }
 }
 .filter__tag {
   border: 1px solid #3CBF32;
   background-color: #fff;
   border-radius: 4px;
-  padding: 8px 10px;
+  padding: 10px;
   display: flex;
   cursor: pointer;
   align-items: center;
@@ -489,8 +504,24 @@ h6 {
     flex: 0 0 40px;
   }
 }
+@media (max-width: 68.75em) {
+  .filter__type {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    bottom: 24px;
+  }
+}
+@media (max-width: 68.75em) and (max-width: 35em) {
+  .filter__type {
+    position: static;
+    right: 0;
+    bottom: 0;
+  }
+}
 .filter__type img {
   margin-right: 15px;
+  max-height: 25px;
   cursor: pointer;
 }
 .filter__type img:last-child {
