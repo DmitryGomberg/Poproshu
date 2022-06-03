@@ -193,6 +193,28 @@ h6 {
     padding-top: 3.125rem;
   }
 }
+@media (min-width: 89.375em) {
+  main {
+    padding-bottom: 5.625rem;
+  }
+}
+@media (min-width: 23.4375em) and (max-width: 89.375em) {
+  @supports (padding-bottom: clamp( 1.875rem , 0.5420616114rem  +  5.6872037915vw , 5.625rem )) {
+    main {
+      padding-bottom: clamp( 1.875rem , 0.5420616114rem  +  5.6872037915vw , 5.625rem );
+    }
+  }
+  @supports not (padding-bottom: clamp( 1.875rem , 0.5420616114rem  +  5.6872037915vw , 5.625rem )) {
+    main {
+      padding-bottom: calc(1.875rem + 3.75 * (100vw - 23.4375rem) / 65.9375);
+    }
+  }
+}
+@media (max-width: 23.4375em) {
+  main {
+    padding-bottom: 1.875rem;
+  }
+}
 
 .green {
   color: #3CBF32;
