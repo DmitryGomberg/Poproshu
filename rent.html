@@ -6,12 +6,12 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220605205536" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220606153801" />
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20220605205536" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&_v=20220605205536" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20220606153801" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&_v=20220606153801" rel="stylesheet" />
 </head>
 
 <body>
@@ -413,8 +413,75 @@
 												<label for="c4" class="checkbox__label"><span class="checkbox__text">Залог паспорт</span></label>
 											</div>
 										</div>
+										<div class="item-rent__width">
+											<div class="item-rent__select-wrap">
+												<div class="item-rent__text">Назначьте цену за минимальный период аренды</div>
+												<div class="item-rent__wrap">
+													<div class="item-rent__select item-rent__select-center">Select</div>
+													<input type="text" placeholder="4500" class="item-rent__input-center">
+												</div>
+											</div>
+											<div class="item-rent__select-wrap">
+												<div class="item-rent__text">Выберите скидку на определенный день аренды</div>
+												<div class="item-rent-line">
+													<div class="item-rent-line__wrap">
+														<div class="item-rent__select">Select</div>
+														<div class="item-rent__select">Select</div>
+														<div class="item-rent__select">Select</div>
+													</div>
+													<div class="item-rent-line__btn">
+														<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+															<path d="M19.0555 10.1576C19.0555 10.7099 18.6078 11.1576 18.0555 11.1576H10.8889V18.5258C10.8889 19.0781 10.4412 19.5258 9.88888 19.5258H9.16666C8.61438 19.5258 8.16666 19.0781 8.16666 18.5258V11.1576H1C0.447716 11.1576 0 10.7099 0 10.1576V9.3682C0 8.81591 0.447715 8.3682 1 8.3682H8.16666V1C8.16666 0.447716 8.61438 0 9.16666 0H9.88888C10.4412 0 10.8889 0.447715 10.8889 1V8.3682H18.0555C18.6078 8.3682 19.0555 8.81591 19.0555 9.3682V10.1576Z" fill="#3CBF32" />
+														</svg>
+													</div>
+												</div>
+												<div class="item-rent-line">
+													<div class="item-rent-line__wrap">
+														<div class="item-rent__select">Select</div>
+														<div class="item-rent__select">Select</div>
+														<div class="item-rent__select">Select</div>
+													</div>
+													<div class="item-rent-line__btn">
+														<img src="img/icon-delete.svg" alt="">
+													</div>
+												</div>
+											</div>
+											<div class="item-rent__select-wrap">
+												<div class="checkbox checkbox-center">
+													<input id="c5" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="c5" class="checkbox__label">
+														<div class="checkbox__elem">
+															<div class="checkbox__elem-icon">
+																<img src="img/icon-document.svg" alt="">
+															</div>
+															<div class="checkbox__elem-text">Договор аренды.pdf</div>
+														</div>
+													</label>
+												</div>
+												<div class="checkbox checkbox-center">
+													<input id="c6" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="c6" class="checkbox__label">
+														<div class="checkbox__elem">
+															<div class="checkbox__elem-icon">
+																<img src="img/icon-document.svg" alt="">
+															</div>
+															<div class="checkbox__elem-text">Договор аренды.pdf</div>
+														</div>
+													</label>
+												</div>
+												<div class="checkbox">
+													<input id="c7" class="checkbox__input" type="checkbox" value="1" name="form[]">
+													<label for="c7" class="checkbox__label">
+														<div class="checkbox__text">
+															Использовать договор попрошу.ру
+														</div>
+													</label>
+												</div>
+											</div>
+										</div>
 									</div>
 								</div>
+								<button type="submit" class="rent__btn btn btn-green">Сдать товар</button>
 							</form>
 						</article>
 						<aside class="rent__aside">
@@ -502,7 +569,7 @@
 		</footer>
 	</div>
 
-	<script src="js/app.min.js?_v=20220605205536"></script>
+	<script src="js/app.min.js?_v=20220606153801"></script>
 </body>
 
 </html>
