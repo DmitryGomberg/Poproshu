@@ -452,6 +452,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 21px;
+  padding-bottom: 21px;
 }
 @media (min-width: 89.375em) {
   .header__wrapper {
@@ -475,54 +477,16 @@ h6 {
     gap: 0.625rem;
   }
 }
-@media (min-width: 89.375em) {
+@media (max-width: 61.9375em) {
   .header__wrapper {
-    padding-top: 1.3125rem;
-  }
-}
-@media (min-width: 23.4375em) and (max-width: 89.375em) {
-  @supports (padding-top: clamp( 0.9375rem , 0.8042061611rem  +  0.5687203791vw , 1.3125rem )) {
-    .header__wrapper {
-      padding-top: clamp( 0.9375rem , 0.8042061611rem  +  0.5687203791vw , 1.3125rem );
-    }
-  }
-  @supports not (padding-top: clamp( 0.9375rem , 0.8042061611rem  +  0.5687203791vw , 1.3125rem )) {
-    .header__wrapper {
-      padding-top: calc(0.9375rem + 0.375 * (100vw - 23.4375rem) / 65.9375);
-    }
-  }
-}
-@media (max-width: 23.4375em) {
-  .header__wrapper {
-    padding-top: 0.9375rem;
-  }
-}
-@media (min-width: 89.375em) {
-  .header__wrapper {
-    padding-bottom: 1.3125rem;
-  }
-}
-@media (min-width: 23.4375em) and (max-width: 89.375em) {
-  @supports (padding-bottom: clamp( 0.9375rem , 0.8042061611rem  +  0.5687203791vw , 1.3125rem )) {
-    .header__wrapper {
-      padding-bottom: clamp( 0.9375rem , 0.8042061611rem  +  0.5687203791vw , 1.3125rem );
-    }
-  }
-  @supports not (padding-bottom: clamp( 0.9375rem , 0.8042061611rem  +  0.5687203791vw , 1.3125rem )) {
-    .header__wrapper {
-      padding-bottom: calc(0.9375rem + 0.375 * (100vw - 23.4375rem) / 65.9375);
-    }
-  }
-}
-@media (max-width: 23.4375em) {
-  .header__wrapper {
-    padding-bottom: 0.9375rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
   }
 }
 .header__logo {
-  height: 24px;
+  height: 21px;
 }
-@media (max-width: 100em) {
+@media (max-width: 68.75em) {
   .header__logo {
     height: 18px;
   }
@@ -567,8 +531,33 @@ h6 {
     height: 2rem;
   }
 }
-.header__menu-button img {
+.header__menu-button.active .header__menu-icon span:nth-child(1) {
+  transform: rotate(45deg);
+  position: relative;
+  top: 5px;
+}
+.header__menu-button.active .header__menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+.header__menu-button.active .header__menu-icon span:nth-child(3) {
+  transform: rotate(-45deg);
+  position: relative;
+  top: -5px;
+}
+.header__menu-button .header__menu-icon {
+  display: flex;
+  flex-direction: column;
   margin-right: 10px;
+}
+.header__menu-button .header__menu-icon span {
+  width: 15px;
+  height: 2px;
+  background-color: rgba(60, 191, 50, 0.75);
+  margin-bottom: 3px;
+  transition: all 0.2s ease;
+}
+.header__menu-button .header__menu-icon span:last-child {
+  margin-bottom: 0;
 }
 @media (max-width: 68.75em) {
   .header__menu-button {
@@ -797,6 +786,12 @@ h6 {
   .links-header__item:first-child {
     display: flex;
   }
+  .links-header__item img {
+    width: 14px;
+  }
+}
+.links-header__nav {
+  border-radius: 5px;
 }
 @media (max-width: 53.125em) {
   .links-header__nav {
@@ -834,21 +829,40 @@ h6 {
 .menu-header {
   position: absolute;
   z-index: 9;
-  top: 0;
+  top: -10px;
   visibility: hidden;
   opacity: 0;
   right: 0;
   width: 100%;
+  height: 100vh;
   background-color: #fff;
   padding-top: 20px;
   padding-bottom: 20px;
+  pointer-events: none;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.107);
+  padding-top: 90px;
   transition: all 0.2s ease;
 }
+@media (max-width: 87.5em) {
+  .menu-header {
+    padding-top: 85px;
+  }
+}
+@media (max-width: 61.9375em) {
+  .menu-header {
+    padding-top: 70px;
+  }
+}
+@media (max-width: 53.125em) {
+  .menu-header {
+    padding-top: 60px;
+  }
+}
 .menu-header.open {
-  top: 100%;
+  top: 0;
   opacity: 1;
   visibility: visible;
+  pointer-events: auto;
 }
 .menu-header__container {
   display: grid;
@@ -1027,9 +1041,9 @@ h6 {
   }
 }
 .footer__logo img {
-  height: 24px;
+  height: 21px;
 }
-@media (max-width: 100em) {
+@media (max-width: 68.75em) {
   .footer__logo img {
     height: 18px;
   }
@@ -1460,6 +1474,8 @@ h6 {
   display: flex;
   align-items: center;
   margin-top: 10px;
+  flex-wrap: wrap;
+  row-gap: 5px;
 }
 @media (max-width: 62.5em) {
   .item-rent__tags {
