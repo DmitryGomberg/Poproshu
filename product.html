@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Сдать в аренду</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220609145112" />
+	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20220609145112" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&_v=20220609145112" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<div class="header__wrapper">
+					<button class="header__burger" id="header__burger">
+						<img src="img/icon-burger-mob.svg" alt="" />
+					</button>
+					<a href="">
+						<div class="header__logo">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="" /></picture>
+						</div>
+					</a>
+					<button class="header__menu-button" id="header__menu-open">
+						<div class="header__menu-icon">
+							<span></span><span></span><span></span>
+						</div>
+						Категории
+					</button>
+					<form action="" class="header__form form-header">
+						<input type="text" class="form-header__input" placeholder="Поиск" />
+						<button>
+							<img src="img/icon-search.svg" alt="" class="form-header__icon" />
+						</button>
+					</form>
+					<button class="header__button btn btn-green">
+						Сдать в аренду
+						<img src="img/icon-plus.svg" alt="" />
+					</button>
+					<div class="header__links links-header">
+						<a class="links-header__item links-header__mobile" href="">
+							<img src="img/icon-search.svg" alt="" />
+						</a>
+						<a class="links-header__item links-header__nav" href="">
+							<picture><source srcset="img/icon-navig.webp" type="image/webp"><img src="img/icon-navig.png" alt="" /></picture>
+						</a>
+						<a class="links-header__item" href="">
+							<picture><source srcset="img/icon-bell.webp" type="image/webp"><img src="img/icon-bell.png" alt="" /></picture>
+						</a>
+						<a class="links-header__item" href="">
+							<picture><source srcset="img/icon-user.webp" type="image/webp"><img src="img/icon-user.png" alt="" /></picture>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__menu menu-header" id="header__menu">
+				<div data-tabs class="menu-header__container">
+					<div class="menu-header__list">
+						<div class="menu-header__list-title">Категории</div>
+						<nav data-tabs-titles class="menu-header__navigation">
+							<button type="button" class="menu-header__title _tab-active">
+								<img src="img/menu-icons/1.svg" alt="" />
+								Для детей
+							</button>
+							<button type="button" class="menu-header__title">
+								<img src="img/menu-icons/2.svg" alt="" />
+								Одежда
+							</button>
+							<button type="button" class="menu-header__title">
+								<img src="img/menu-icons/3.svg" alt="" />
+								Электроника
+							</button>
+						</nav>
+					</div>
+					<div class="menu-header__main">
+						<div class="menu-header__main-close" id="menu-header__main-close">
+							<img src="img/icon-close-dark.svg" alt="" />
+						</div>
+						<div data-tabs-body class="menu-header__content">
+							<div class="menu-header__body">
+								<div class="menu-header__body-title">Одежда</div>
+								<div class="menu-header__body-grid menu__header-grid">
+									<div class="menu__header-grid__element">
+										<div class="menu__header-grid__name">Аксессуары</div>
+										<ul class="menu__header-grid__list">
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+										</ul>
+										<button class="menu__header-grid__more">Еще...</button>
+									</div>
+									<div class="menu__header-grid__element">
+										<div class="menu__header-grid__name">Аксессуары</div>
+										<ul class="menu__header-grid__list">
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+										</ul>
+										<button class="menu__header-grid__more">Еще...</button>
+									</div>
+									<div class="menu__header-grid__element">
+										<div class="menu__header-grid__name">Аксессуары</div>
+										<ul class="menu__header-grid__list">
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+										</ul>
+										<button class="menu__header-grid__more">Еще...</button>
+									</div>
+									<div class="menu__header-grid__element">
+										<div class="menu__header-grid__name">Аксессуары</div>
+										<ul class="menu__header-grid__list">
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+										</ul>
+										<button class="menu__header-grid__more">Еще...</button>
+									</div>
+									<div class="menu__header-grid__element">
+										<div class="menu__header-grid__name">Аксессуары</div>
+										<ul class="menu__header-grid__list">
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+										</ul>
+										<button class="menu__header-grid__more">Еще...</button>
+									</div>
+									<div class="menu__header-grid__element">
+										<div class="menu__header-grid__name">Аксессуары</div>
+										<ul class="menu__header-grid__list">
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+										</ul>
+										<button class="menu__header-grid__more">Еще...</button>
+									</div>
+									<div class="menu__header-grid__element">
+										<div class="menu__header-grid__name">Аксессуары</div>
+										<ul class="menu__header-grid__list">
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+										</ul>
+										<button class="menu__header-grid__more">Еще...</button>
+									</div>
+									<div class="menu__header-grid__element">
+										<div class="menu__header-grid__name">Аксессуары</div>
+										<ul class="menu__header-grid__list">
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+										</ul>
+										<button class="menu__header-grid__more">Еще...</button>
+									</div>
+									<div class="menu__header-grid__element">
+										<div class="menu__header-grid__name">Аксессуары</div>
+										<ul class="menu__header-grid__list">
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+											<li class="menu__header-grid-item">
+												<a href="">Галстуки</a>
+											</li>
+										</ul>
+										<button class="menu__header-grid__more">Еще...</button>
+									</div>
+								</div>
+							</div>
+							<div class="menu-header__body">Содержимое второго таба</div>
+							<div class="menu-header__body">Содержимое третьего таба</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main>
+			<div class="product">
+				<div class="product__container">
+					<div class="product__inner">
+						<article class="product__article">
+							<div class="product__name-inner">
+								<div class="product__title title">Ветровка/куртка мужская stussy оригинал</div>
+								<div class="product__hearts">
+									<a href="" class="product__heart-item">
+										<img src="img/icon-heart-green.svg" alt="">
+									</a>
+									<a href="" class="product__heart-item">
+										<img src="img/icon-heart-green-fill.svg" alt="">
+									</a>
+								</div>
+							</div>
+							<div class="product__breadkrumbs">
+								<ul class="product__breadkrumbs-list">
+									<li class="product__breadkrumbs-item"><a href="">Одежда</a></li>
+									<li class="product__breadkrumbs-item"><a href="">Куртки</a></li>
+									<li class="product__breadkrumbs-item"><a href="">Stussy</a></li>
+								</ul>
+							</div>
+							<div class="product__header header-product">
+								<div class="header-product__user">
+									<a href="" class="header-product__user-image">
+										<picture><source srcset="img/user.webp" type="image/webp"><img src="img/user.png" alt=""></picture>
+									</a>
+									<div class="header-product__user-info">
+										<div class="header-product__user-info__top">
+											<a href="" class="header-product__user-name">
+												Игорь Войтенко
+											</a>
+											<div class="header-product__user-date">
+												на Poproshu.ru с 06.12.2020
+											</div>
+										</div>
+										<div class="header-product__user-info__bottom">
+											<div class="header-product__place">
+												Москва, Ленина 50, 3 подъезд, 36 квартира
+											</div>
+										</div>
+									</div>
+								</div>
+								<a href="" class="header-product__write">
+									<div class="header-product__write-inner">
+										<img src="img/icon-text.svg" alt="">
+										Написать сообщение
+									</div>
+								</a>
+								<a href="" class="header-product__call">
+									<p>
+										Показать телефон <br>
+										+7 <span> ••• ••• •• ••</span>
+									</p>
+								</a>
+							</div>
+							<div class="product__main">
+								<div class="product__main-left left-product">
+									<div class="left-product__slider">
+										<div class="left-product__slider-preview">
+											<div class="left-product__slider-arrow left-product__slider-arrow__prev">
+												<img src="img/icon-arrow-slider.svg" alt="">
+											</div>
+											<div class="left-product__image-ibg"><picture><source srcset="img/product2.webp" type="image/webp"><img src="img/product2.png" alt=""></picture></div>
+											<div class="left-product__image-ibg"><picture><source srcset="img/product2.webp" type="image/webp"><img src="img/product2.png" alt=""></picture></div>
+											<div class="left-product__image-ibg"><picture><source srcset="img/product2.webp" type="image/webp"><img src="img/product2.png" alt=""></picture></div>
+											<div class="left-product__image-ibg"><picture><source srcset="img/product2.webp" type="image/webp"><img src="img/product2.png" alt=""></picture></div>
+											<div class="left-product__image-ibg"><picture><source srcset="img/product2.webp" type="image/webp"><img src="img/product2.png" alt=""></picture></div>
+											<div class="left-product__slider-arrow left-product__slider-arrow__next">
+												<img src="img/icon-arrow-slider.svg" alt="">
+											</div>
+										</div>
+										<div class="left-product__slider-main">
+											<div class="left-product__slider-main__image-ibg"><picture><source srcset="img/product2.webp" type="image/webp"><img src="img/product2.png" alt=""></picture></div>
+										</div>
+									</div>
+									<div class="left-product__descr">
+										<div class="left-product__descr-title title">Описание</div>
+										<div class="left-product__descr-text">
+											Lamborghini Huracán — идеальное сочетание технологий и дизайна.
+											При первом взгляде на спорткар вы испытаете незабываемые эмоции:
+											четкие аэродинамическими линии модели пронзают воздух и дарят
+											ощущение превосходства на дороге.
+										</div>
+										<a href="" class="left-product__descr-more">Развернуть описание</a>
+									</div>
+								</div>
+								<div class="product__main-right right-product">
+									<div class="right-product__offer">
+										<div class="right-product__offer-name">Предложение от Игоря Войтенко</div>
+										<div class="right-product__offer-publicate">
+											Дата публикации:
+											<div class="right-product__offer-date">20.06.2021</div>
+										</div>
+									</div>
+									<div class="right-product__price">
+										<div class="right-product__price-item">
+											<div class="right-product__price-icon">
+												<img src="img/icon-price.svg" alt="">
+											</div>
+											<div class="right-product__price-text">
+												Цена за день:
+												<span class="green">20000₽</span>
+											</div>
+										</div>
+										<div class="right-product__price-item">
+											<div class="right-product__price-icon">
+												<img src="img/icon-zalog.svg" alt="">
+											</div>
+											<div class="right-product__price-text">
+												Залог:
+												<span class="green">3000 рублей</span>
+											</div>
+										</div>
+										<div class="right-product__price-item">
+											<div class="right-product__price-icon">
+												<img src="img/icon-delivery.svg" alt="">
+											</div>
+											<div class="right-product__price-text">
+												Доставка:
+												<span class="green">Есть</span>
+											</div>
+										</div>
+									</div>
+									<div class="right-product__sale">
+										<div class="right-product__subtitle product__subtitle">Скидки</div>
+										<ul class="right-product__sale-list">
+											<li class="right-product__sale-item sale-item__product">
+												<div class="sale-item__product-right">
+													<div class="sale-item__product-condition">При заказе от 2 часов</div>
+													<div class="sale-item__product-price">
+														<span>20000₽</span>
+														18000₽
+													</div>
+												</div>
+												<div class="sale-item__product-left">
+													-10%
+												</div>
+											</li>
+											<li class="right-product__sale-item sale-item__product">
+												<div class="sale-item__product-right">
+													<div class="sale-item__product-condition">При заказе от 15 дней</div>
+													<div class="sale-item__product-price">
+														<span>20000₽</span>
+														16000₽
+													</div>
+												</div>
+												<div class="sale-item__product-left">
+													-20%
+												</div>
+											</li>
+											<li class="right-product__sale-item sale-item__product">
+												<div class="sale-item__product-right">
+													<div class="sale-item__product-condition">При заказе от 35 дней</div>
+													<div class="sale-item__product-price">
+														<span>20000₽</span>
+														14000₽
+													</div>
+												</div>
+												<div class="sale-item__product-left">
+													-30%
+												</div>
+											</li>
+										</ul>
+									</div>
+									<div class="right-product__state">
+										<div class="right-product__state-top">
+											<div class="right-product__subtitle product__subtitle">Состояние</div>
+											<div class="right-product__state-num">9/10</div>
+										</div>
+										<div class="right-product__state-line">
+											<span></span>
+										</div>
+									</div>
+									<div class="right-product__tags">
+										<div class="right-product__subtitle product__subtitle">Хэштэги:</div>
+										<ul class="right-product__tags-list">
+											<li class="right-product__tags-item"># PS</li>
+											<li class="right-product__tags-item"># PS</li>
+											<li class="right-product__tags-item"># PS</li>
+											<li class="right-product__tags-item"># PS</li>
+											<li class="right-product__tags-item"># PS</li>
+										</ul>
+									</div>
+									<div class="right-product__simillar">
+										<div class="right-product__simillar-top">
+											<div class="right-product__simillar-title title">Похожие товары</div>
+											<a href="" class="right-product__simillar-link">Смотреть все товары</a>
+										</div>
+										<ul class="right-product__simillar-cards">
+											<li class="cards__item item-card">
+												<div class="item-card__image-wrap">
+													<a href="" class="item-card__image-ibg">
+														<picture><source srcset="img/random.webp" type="image/webp"><img src="img/random.jpg" alt=""></picture>
+													</a>
+													<div class="item-card__sale">-20%</div>
+													<a href="" class="item-card__like">
+														<img src="img/icon-heart.svg" alt="" />
+													</a>
+												</div>
+												<div class="item-card__info">
+													<a href="" class="item-card__info-name">
+														Самокат двухколесный
+													</a>
+													<div class="item-card__info-price">
+														<div class="item-card__info-price__currrent">
+															4 400 ₽
+														</div>
+														<div class="item-card__info-price__old">5 500 ₽</div>
+													</div>
+													<div class="item-card__other">
+														<div class="item-card__part">
+															<div class="item-card__place">
+																Санкт-Петербург, Улица Дыбенко
+															</div>
+															<div class="item-card__time">Сегодня в 11:09</div>
+														</div>
+														<div class="item-card__delivery">
+															<picture>
+																<source srcset="img/icon-delivery.webp" type="image/webp" />
+																<img src="img/icon-delivery.png" alt="" />
+															</picture>
+														</div>
+													</div>
+												</div>
+											</li>
+											<li class="cards__item item-card">
+												<div class="item-card__image-wrap">
+													<a href="" class="item-card__image-ibg">
+														<picture><source srcset="img/random.webp" type="image/webp"><img src="img/random.jpg" alt=""></picture>
+													</a>
+													<div class="item-card__sale">-20%</div>
+													<a href="" class="item-card__like">
+														<img src="img/icon-heart.svg" alt="" />
+													</a>
+												</div>
+												<div class="item-card__info">
+													<a href="" class="item-card__info-name">
+														Самокат двухколесный
+													</a>
+													<div class="item-card__info-price">
+														<div class="item-card__info-price__currrent">
+															4 400 ₽
+														</div>
+														<div class="item-card__info-price__old">5 500 ₽</div>
+													</div>
+													<div class="item-card__other">
+														<div class="item-card__part">
+															<div class="item-card__place">
+																Санкт-Петербург, Улица Дыбенко
+															</div>
+															<div class="item-card__time">Сегодня в 11:09</div>
+														</div>
+														<div class="item-card__delivery">
+															<picture>
+																<source srcset="img/icon-delivery.webp" type="image/webp" />
+																<img src="img/icon-delivery.png" alt="" />
+															</picture>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+										<div class="right-product__simillar-arrow">
+											<svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.5303 6.53033C15.8232 6.23744 15.8232 5.76256 15.5303 5.46967L10.7574 0.696699C10.4645 0.403806 9.98959 0.403806 9.6967 0.696699C9.40381 0.989593 9.40381 1.46447 9.6967 1.75736L13.9393 6L9.6967 10.2426C9.40381 10.5355 9.40381 11.0104 9.6967 11.3033C9.98959 11.5962 10.4645 11.5962 10.7574 11.3033L15.5303 6.53033ZM0 6.75H15V5.25H0V6.75Z" fill="#fff" />
+											</svg>
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+						<aside class="product__aside">
+							<picture><source srcset="img/random.webp" type="image/webp"><img src="img/random.jpg" alt="" class="rent__aside-image"></picture>
+						</aside>
+					</div>
+				</div>
+			</div>
+
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__top">
+					<div class="footer__part">
+						<a href="" class="footer__logo">
+							<picture>
+								<source srcset="img/logo.webp" type="image/webp" />
+								<img src="img/logo.png" alt="" />
+							</picture>
+						</a>
+						<ul class="footer__social">
+							<li class="footer__social-item">
+								<a href=""><img src="img/social/1.svg" alt="" /></a>
+							</li>
+							<li class="footer__social-item">
+								<a href=""><img src="img/social/2.svg" alt="" /></a>
+							</li>
+							<li class="footer__social-item">
+								<a href=""><img src="img/social/3.svg" alt="" /></a>
+							</li>
+							<li class="footer__social-item">
+								<a href=""><img src="img/social/4.svg" alt="" /></a>
+							</li>
+							<li class="footer__social-item">
+								<a href="">
+									<picture>
+										<source srcset="img/social/5.webp" type="image/webp" />
+										<img src="img/social/5.png" alt="" />
+									</picture>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__part">
+						<div class="footer__part-name">О сервисе</div>
+						<ul class="footer__part-list">
+							<li class="footer__part-list__item">
+								<a href="">О нас</a>
+							</li>
+							<li class="footer__part-list__item">
+								<a href="">FAQ</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__part">
+						<div class="footer__part-name">Документы</div>
+						<ul class="footer__part-list">
+							<li class="footer__part-list__item">
+								<a href="">Шаблон договора </a>
+							</li>
+							<li class="footer__part-list__item">
+								<a href="">Правила пользования</a>
+							</li>
+							<li class="footer__part-list__item">
+								<a href="">Политика конфиденциальности</a>
+							</li>
+						</ul>
+					</div>
+					<div class="footer__part">
+						<div class="footer__part-name">Поиск по сайту</div>
+						<div class="footer__part-text">
+							* Введите данные, которые хотите найти на сайте
+						</div>
+						<form action="" class="footer__form form">
+							<input type="text" class="footer__input" placeholder="Поиск" />
+						</form>
+					</div>
+				</div>
+				<div class="footer__bottom">
+					<div class="footer__copy">Poproshu.ru © 2021. Все права защищены</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<script src="js/app.min.js?_v=20220609145112"></script>
+</body>
+
+</html>
