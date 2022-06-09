@@ -279,12 +279,18 @@
     const btnOpen = document.getElementById("header__menu-open");
     const btnOpenMob = document.getElementById("header__burger");
     const headerMenu = document.getElementById("header__menu");
+    const script_menuClose = document.getElementById("menu-header__main-close");
     if (btnOpen) btnOpen.addEventListener("click", (function() {
         headerMenu.classList.toggle("open");
         btnOpen.classList.toggle("active");
         document.documentElement.classList.toggle("lock");
     }));
     if (btnOpenMob) btnOpenMob.addEventListener("click", (function() {
+        headerMenu.classList.toggle("open");
+        btnOpen.classList.toggle("active");
+        document.documentElement.classList.toggle("lock");
+    }));
+    if (script_menuClose) script_menuClose.addEventListener("click", (function() {
         headerMenu.classList.toggle("open");
         btnOpen.classList.toggle("active");
         document.documentElement.classList.toggle("lock");
