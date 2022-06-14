@@ -295,6 +295,14 @@
         btnOpen.classList.toggle("active");
         document.documentElement.classList.toggle("lock");
     }));
+    const not = document.querySelectorAll(".profile-tabs__notific-switch");
+    document.querySelectorAll(".profile-tabs__notific-info");
+    if (not) not.forEach((i => {
+        i.addEventListener("click", (function() {
+            i.classList.toggle("active");
+            i.parentElement.classList.toggle("active");
+        }));
+    }));
     window["FLS"] = true;
     isWebp();
     tabs();
