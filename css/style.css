@@ -1644,17 +1644,17 @@ Card styles start===============================================================
 }
 @media (max-width: 89.375em) {
   .cards__wrap-small .item-card, .cards__wrap-small .profile__card-upload {
-    max-width: calc((100vw - 125px - 30px) / 6);
+    max-width: calc((100vw - 125px - 20px) / 6);
   }
 }
 @media (max-width: 80em) {
   .cards__wrap-small .item-card, .cards__wrap-small .profile__card-upload {
-    max-width: calc((100vw - 100px - 30px) / 5);
+    max-width: calc((100vw - 100px - 20px) / 5);
   }
 }
 @media (max-width: 61.9375em) {
   .cards__wrap-small .item-card, .cards__wrap-small .profile__card-upload {
-    max-width: calc((100vw - 75px - 30px) / 4);
+    max-width: calc((100vw - 75px - 20px) / 4);
   }
 }
 @media (max-width: 57.5em) {
