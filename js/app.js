@@ -637,12 +637,18 @@
         document.documentElement.classList.toggle("lock");
     }));
     const not = document.querySelectorAll(".profile-tabs__notific-switch");
-    document.querySelectorAll(".profile-tabs__notific-info");
+    const notItems = document.getElementById("toggle-status");
     if (not) not.forEach((i => {
         i.addEventListener("click", (function() {
             i.classList.toggle("active");
             i.parentElement.classList.toggle("active");
+            notItems.classList.toggle("chosen");
         }));
+    }));
+    const drop = document.getElementById("links-header__item-drop");
+    const dropItem = document.getElementById("item-drop__header");
+    if (drop) drop.addEventListener("click", (function() {
+        dropItem.classList.toggle("open");
     }));
     window["FLS"] = true;
     isWebp();

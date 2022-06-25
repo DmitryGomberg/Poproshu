@@ -6,12 +6,12 @@
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220621222321" />
+	<link rel="stylesheet" href="css/style.min.css?_v=20220625150624" />
 	<!-- <link rel="shortcut icon" href="favicon.ico"> -->
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20220621222321" rel="stylesheet" />
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&_v=20220621222321" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic&_v=20220625150624" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic&_v=20220625150624" rel="stylesheet" />
 </head>
 
 <body>
@@ -53,9 +53,26 @@
 						<a class="links-header__item" href="">
 							<picture><source srcset="img/icon-bell.webp" type="image/webp"><img src="img/icon-bell.png" alt="" /></picture>
 						</a>
-						<a class="links-header__item" href="">
-							<picture><source srcset="img/icon-user.webp" type="image/webp"><img src="img/icon-user.png" alt="" /></picture>
-						</a>
+						<div class="links-header__item-wrap">
+							<div class="links-header__item links-header__item-user" id="links-header__item-drop">
+								<picture><source srcset="img/icon-user.webp" type="image/webp"><img src="img/icon-user.png" alt="" /></picture>
+							</div>
+							<div class="links-header__item-drop item-drop__header" id="item-drop__header">
+								<div class="item-drop__header-top">
+									<div class="item-drop__header-name chosen" id="toggle-status">Отдать</div>
+									<div class="item-drop__header-toggle">
+										<div class="profile-tabs__notific-switch"></div>
+									</div>
+									<div class="item-drop__header-name">Взять</div>
+								</div>
+								<ul class="item-drop__header-list">
+									<li class="item-drop__header-item"><a href="">Моя страница</a></li>
+									<li class="item-drop__header-item"><a href="">Избранное</a></li>
+									<li class="item-drop__header-item"><a href="">Настройки</a></li>
+									<li class="item-drop__header-item"><a href="">Отдать в аренду</a></li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -588,7 +605,7 @@
 		</footer>
 	</div>
 
-	<script src="js/app.min.js?_v=20220621222321"></script>
+	<script src="js/app.min.js?_v=20220625150624"></script>
 </body>
 
 </html>
