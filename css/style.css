@@ -4444,8 +4444,8 @@ ProfilePage styles start========================================================
 }
 @media (max-width: 61.9375em) {
   .profile-user__image {
-    width: 50px;
-    height: 50px;
+    width: 50px !important;
+    height: 50px !important;
     margin-right: 10px;
   }
 }
