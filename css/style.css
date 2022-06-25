@@ -12,7 +12,6 @@
 
 html,
 body {
-  height: 100%;
   min-width: 320px;
 }
 
@@ -1974,34 +1973,48 @@ Card styles start===============================================================
   }
 }
 .cards__wrap-small {
+  display: grid;
   padding-top: 0;
+  gap: 25px;
   grid-template-columns: 1fr 1fr 1fr;
+}
+@media (max-width: 43.75em) {
+  .cards__wrap-small {
+    gap: 15px;
+  }
 }
 @media (max-width: 991px) {
   .cards__wrap-small {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
   }
 }
 @media (max-width: 830px) {
   .cards__wrap-small {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr !important;
   }
 }
 @media (max-width: 560px) {
   .cards__wrap-small {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 @media (max-width: 321px) {
   .cards__wrap-small {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
   }
 }
 
 .cards__wrap-sp {
+  display: grid;
+  gap: 25px;
   padding-top: 0;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   max-width: 926px;
+}
+@media (max-width: 43.75em) {
+  .cards__wrap-sp {
+    gap: 15px;
+  }
 }
 @media (max-width: 1400px) {
   .cards__wrap-sp {
@@ -2043,9 +2056,16 @@ Card styles start===============================================================
 }
 
 .cards__wrap-full {
+  display: grid;
+  gap: 25px;
   padding-top: 0;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   max-width: 100%;
+}
+@media (max-width: 43.75em) {
+  .cards__wrap-full {
+    gap: 15px;
+  }
 }
 @media (max-width: 1400px) {
   .cards__wrap-full {
@@ -3868,7 +3888,7 @@ ProductPage styles start========================================================
     border: none;
   }
 }
-@media (max-width: 26.25em) {
+@media (max-width: 30em) {
   .header-product__write {
     margin-right: 0;
     height: 39px;
@@ -3918,7 +3938,7 @@ ProductPage styles start========================================================
     height: 39px;
   }
 }
-@media (max-width: 26.25em) {
+@media (max-width: 30em) {
   .header-product__call {
     order: 0;
   }
@@ -4578,7 +4598,7 @@ ProfilePage styles start========================================================
 }
 @media (max-width: 30em) {
   .profile-user__blocks {
-    flex-direction: row;
+    flex-direction: row !important;
     width: 100%;
     justify-content: space-around;
     padding-top: 10px;
@@ -4673,15 +4693,11 @@ ProfilePage styles start========================================================
     margin-right: 10px;
   }
 }
-@media (max-width: 39.375em) {
-  .profile-user__exit {
-    width: 100%;
-    padding-top: 10px;
-  }
-}
-@media (max-width: 36.25em) {
+@media (max-width: 39.5em) {
   .profile-user__exit {
     justify-content: center;
+    width: 100%;
+    padding-top: 10px;
   }
 }
 
@@ -4725,7 +4741,8 @@ ProfilePage styles start========================================================
     overflow-x: auto;
     flex-wrap: nowrap;
     white-space: nowrap;
-    display: flex;
+    display: flex !important;
+    width: 100% !important;
   }
 }
 .profile-tabs__title {
@@ -5324,9 +5341,9 @@ ProfileProductsPage styles start================================================
     display: none;
   }
 }
-@media (max-width: 40.625em) {
+@media (max-width: 54.6875em) {
   .profile-user__btns {
-    align-items: center;
+    align-items: stretch !important;
     justify-content: center;
     flex: 0 0 100%;
     padding-top: 20px;
@@ -5334,8 +5351,8 @@ ProfileProductsPage styles start================================================
 }
 @media (max-width: 30em) {
   .profile-user__btns {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column !important;
+    align-items: center !important;
   }
 }
 .profile-user__btn {
@@ -5346,7 +5363,6 @@ ProfileProductsPage styles start================================================
   display: flex;
   align-items: center;
   padding: 14px;
-  max-height: 48px;
 }
 .profile-user__btn img {
   margin-right: 6px;
@@ -5377,23 +5393,24 @@ ProfileProductsPage styles start================================================
     height: auto;
     line-height: 100%;
     border-radius: 6px;
-    max-height: 48px;
   }
   .profile-user__btn:last-child {
     order: 1;
     padding: 0;
     padding-top: 5px;
   }
-  .profile-user__btn:first-child {
-    max-height: 48px;
+}
+@media (max-width: 54.6875em) {
+  .profile-user__btn {
+    width: calc((100% - 10px) / 2);
+    max-width: 100% !important;
+    padding: 8px 22px !important;
+    border: 1px solid #3CBF32 !important;
   }
 }
 @media (max-width: 40.625em) {
   .profile-user__btn {
     max-width: 257px;
-  }
-  .profile-user__btn:first-child {
-    max-height: 39px;
   }
   .profile-user__btn:last-child {
     padding-bottom: 10px;
@@ -5401,8 +5418,8 @@ ProfileProductsPage styles start================================================
 }
 @media (max-width: 30em) {
   .profile-user__btn {
-    width: 100%;
-    max-width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
   }
 }
 
